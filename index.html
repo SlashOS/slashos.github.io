@@ -20,6 +20,7 @@
                 <a href="#desktop">Desktop</a>
                 <a href="#mobile">Mobile</a>
                 <a href="#features">Features</a>
+                <a href="releases.html">Releases</a>
                 <a href="https://github.com/SlashOS" target="_blank">GitHub</a>
             </div>
             <button id="menu-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">☰</button>
@@ -30,16 +31,33 @@
     <section id="hero">
         <div class="hero-content hero-split">
             <div class="hero-left">
+                <p class="eyebrow">Unified desktop + mobile</p>
                 <h1>SlashOS</h1>
+                <p class="hero-sub">Experience the future of computing with a refined visual language and a unified ecosystem for desktop and mobile.</p>
+                <div class="hero-meta-grid">
+                    <div class="hero-card glass">
+                        <div class="card-top">
+                            <span class="pill success">Stable</span>
+                            <span class="eyebrow muted">Latest</span>
+                        </div>
+                        <div class="card-title" id="hero-stable-tag">Loading...</div>
+                        <p class="card-sub" id="hero-stable-date"></p>
+                        <div class="card-actions" id="hero-stable-btn"></div>
+                    </div>
+                    <div class="hero-card glass">
+                        <div class="card-top">
+                            <span class="pill accent">Edge</span>
+                            <span class="eyebrow muted">Fast track</span>
+                        </div>
+                        <div class="card-title" id="hero-edge-tag">Loading...</div>
+                        <p class="card-sub" id="hero-edge-date"></p>
+                        <div class="card-actions" id="hero-edge-btn"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
                 <div class="hero-quote glass">
                     <p>"A light base, a beautiful design, seamless everywhere."</p>
-                </div>
-                <p class="hero-sub">Experience the future of computing with a refined visual language and a unified ecosystem for desktop and mobile.</p>
-            </div>
-            <div class="hero-meta">
-                <div class="hero-latest">
-                    <span id="hero-latest">Loading latest release...</span>
-                    <div id="hero-latest-btn" style="display:inline-block; margin-left:12px;"></div>
                 </div>
             </div>
         </div>
@@ -70,18 +88,44 @@
     </section>
 
     <section id="desktop">
-        <h3>SlashOS Desktop</h3>
-        <p>Powerful, minimal, and customizable — optimized for creators and tinkerers.</p>
-        <div class="download-grid">
-            <div class="download-card">
-                <h4>Download Latest</h4>
-                <p id="latest-desc">Fetching latest stable release...</p>
-                <div id="latest-btn" class="download-cta"> </div>
-            </div>
-            <div class="download-card">
-                <h4>Other Releases</h4>
-                <ul id="releases-list"></ul>
-            </div>
+        <div class="section-heading">
+            <h3>SlashOS Desktop</h3>
+            <p>Powerful, minimal, and customizable — optimized for creators and tinkerers.</p>
+        </div>
+        <div class="hero-meta-grid download-hero-grid">
+            <article class="hero-card glass download-card">
+                <div class="card-top">
+                    <span class="pill success">Stable</span>
+                    <span class="eyebrow muted">Latest</span>
+                </div>
+                <div class="card-title" id="stable-tag">Loading...</div>
+                <p class="card-sub" id="stable-date"></p>
+                <p class="release-desc" id="stable-body">Fetching latest stable release...</p>
+                <div class="card-actions" id="stable-cta"></div>
+            </article>
+
+            <article class="hero-card glass download-card">
+                <div class="card-top">
+                    <span class="pill accent">Edge</span>
+                    <span class="eyebrow muted">Fast track</span>
+                </div>
+                <div class="card-title" id="edge-tag">Loading...</div>
+                <p class="card-sub" id="edge-date"></p>
+                <p class="release-desc" id="edge-body">Fetching most recent build...</p>
+                <div class="card-actions" id="edge-cta"></div>
+            </article>
+
+            <a class="hero-card glass archive-tile" href="releases.html">
+                <div class="card-top">
+                    <span class="pill outline">Archive</span>
+                    <span class="eyebrow muted">All builds</span>
+                </div>
+                <div class="card-title">Browse releases</div>
+                <p class="card-sub">Find older builds and notes.</p>
+                <div class="card-actions">
+                    <span class="arrow">→</span>
+                </div>
+            </a>
         </div>
     </section>
 
