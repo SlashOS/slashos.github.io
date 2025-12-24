@@ -7,6 +7,7 @@
     --shell-wide: min(1200px, calc(100% - 2.75rem));
     --gap: clamp(0.75rem, 2vw, 1.25rem);
     --header-height: 60px;
+    --top-offset: clamp(10px, 2vw, 18px);
 }
 
 html {
@@ -29,7 +30,7 @@ body {
     color: #eaf2ff;
     line-height: 1.6;
     min-height: 100vh;
-    padding-top: calc(var(--header-height) + env(safe-area-inset-top) + 2px);
+    padding-top: calc(env(safe-area-inset-top) + var(--top-offset));
 }
 
 .glass {
@@ -57,7 +58,7 @@ body {
 
 header {
     position: sticky;
-    top: 0;
+    top: calc(env(safe-area-inset-top) + var(--top-offset));
     left: 0;
     right: 0;
     z-index: 1000;
@@ -72,6 +73,7 @@ header {
 /* Keep header glassy without shifting */
 header { transition: box-shadow 0.25s ease-in-out; }
 header:hover { box-shadow: none; }
+html { scroll-padding-top: calc(var(--header-height) + var(--top-offset)); }
 
 nav.nav-inner {
     display: flex;
@@ -155,7 +157,7 @@ body.menu-open { overflow: hidden; }
 }
 
 #hero {
-    padding: clamp(4rem, 7vw, 6rem) clamp(1.25rem, 4vw, 2.75rem);
+    padding: clamp(3rem, 5vw, 4.25rem) clamp(1rem, 3vw, 2.25rem);
     margin: 0 auto;
     text-align: left;
     width: var(--shell-wide);
@@ -709,8 +711,8 @@ footer p { margin-top: 1rem; opacity: 0.7; }
 }
 
 @media (max-width: 640px) {
-    header { top: calc(8px + env(safe-area-inset-top)); }
-    body { padding-top: calc(var(--header-height) + env(safe-area-inset-top) + 12px); }
+    header { top: calc(env(safe-area-inset-top) + var(--top-offset)); }
+    body { padding-top: calc(env(safe-area-inset-top) + var(--top-offset)); }
     .hero-left h1 { font-size: 2.2rem; }
     .hero-quote { font-size: 1rem; }
     .hero-card { min-height: 0; padding: 1.25rem; }
