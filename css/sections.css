@@ -317,7 +317,6 @@
 }
 
 .archive-grid {
-    display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
     align-items: start;
@@ -325,7 +324,7 @@
 
 .archive-card {
     padding: 1.35rem;
-    min-height: 240px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
