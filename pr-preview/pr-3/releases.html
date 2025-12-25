@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlashOS Releases</title>
+    <link rel="icon" href="assets/group-76.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="compact-header">
+        <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/group-76.svg" alt="SlashOS Logo">
+                </a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#desktop">Desktop</a>
+                <a href="index.html#mobile">Mobile</a>
+                <a href="releases.html">Releases</a>
+                <a href="https://github.com/SlashOS" target="_blank">GitHub</a>
+            </div>
+            <button id="menu-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section id="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Downloads</p>
+                <h1>Release Archive</h1>
+                <p class="hero-sub">Every SlashOS build in one place — stable and prerelease drops, always up to date.</p>
+            </div>
+        </section>
+
+        <section class="archive-columns">
+            <div>
+                <div class="archive-title">
+                    <div>
+                        <p class="eyebrow">Stable</p>
+                        <h3>Release builds</h3>
+                    </div>
+                </div>
+                <div id="releases-stable" class="archive-grid"></div>
+            </div>
+            <div>
+                <div class="archive-title">
+                    <div>
+                        <p class="eyebrow">Prerelease</p>
+                        <h3>Fast-track builds</h3>
+                    </div>
+                </div>
+                <div id="releases-pre" class="archive-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <a href="index.html#desktop">Desktop Downloads</a>
+                    <a href="index.html#mobile">Mobile Info</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="https://github.com/SlashOS">GitHub</a>
+                    <a href="index.html#features">Features</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <a href="https://discordapp.com/users/768845999594536960" target="_blank">Discord</a>
+                    <a href="https://x.com/CoderMauro2008" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="copyright-year"></span> SlashOS - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/release.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
