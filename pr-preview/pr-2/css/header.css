@@ -46,6 +46,18 @@ header.open {
     gap: 0.5rem;
 }
 
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    display: block;
+    height: 32px;
+    width: auto;
+}
+
 .compact-header .logo img {
     height: 28px;
     width: 28px;
