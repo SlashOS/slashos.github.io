@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+/* HCB-inspired Dark Theme with Glassmorphism */
+
+:root {
+    --shell: min(1100px, calc(100% - 2.75rem));
+    --shell-wide: min(1200px, calc(100% - 2.75rem));
+    --gap: clamp(0.75rem, 2vw, 1.25rem);
+    --header-height: 60px;
+    --top-offset: clamp(10px, 2vw, 18px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    /* Full black background with subtle purple blurred touches */
+    background:
+        radial-gradient(circle at 20% 12%, rgba(139,92,246,0.18), transparent 18%),
+        radial-gradient(circle at 88% 82%, rgba(139,92,246,0.20), transparent 22%),
+        #000000;
+    color: #eaf2ff;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-top: calc(env(safe-area-inset-top) + var(--top-offset));
+}
+
+.glass {
+    /* Classic translucent glass panels (no added gradient) */
+    background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin: 0.75rem auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.glass:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
