@@ -29,3 +29,4 @@ This is a static website hosted on GitHub Pages. No build process required.
 ## Deployment
 
 Push to the `main` branch to deploy via GitHub Pages.
+You don't need any special things to deploy this yourself, just opening the index.html is enough :)
